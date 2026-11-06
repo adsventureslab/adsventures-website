@@ -1,0 +1,1051 @@
+{
+ "seo": {
+  "title": "AdsVentures Lab | Social media marketing agency",
+  "description": "AdsVentures Lab is a social media marketing agency. We plan, shoot, edit and run Meta ads for brands in every industry."
+ },
+ "brand": {
+  "name": "AdsVentures Lab",
+  "logo": "/assets/logo.png"
+ },
+ "nav": {
+  "cta": "Get a free consultation",
+  "links": [
+   {
+    "label": "Home",
+    "href": "#home"
+   },
+   {
+    "label": "About Us",
+    "href": "#about"
+   },
+   {
+    "label": "Services",
+    "href": "#services"
+   },
+   {
+    "label": "Portfolio",
+    "href": "#portfolio"
+   },
+   {
+    "label": "How We Work",
+    "href": "#process"
+   },
+   {
+    "label": "Packages",
+    "href": "#packages"
+   },
+   {
+    "label": "Our Clients",
+    "href": "#clients"
+   },
+   {
+    "label": "Gallery",
+    "href": "#gallery"
+   },
+   {
+    "label": "Careers",
+    "href": "#careers"
+   },
+   {
+    "label": "Contact",
+    "href": "#contact"
+   }
+  ]
+ },
+ "menu": {
+  "title": "Let's grow your brand."
+ },
+ "hero": {
+  "tagline": "AdsVentures Lab, social media marketing agency",
+  "title": "Climb to get *higher opportunities.*",
+  "subtitle": "Reels, content and Meta ads that move your brand up, one step at a time.",
+  "scrollHint": "Scroll down to reveal",
+  "milestones": [
+   "Reach",
+   "Engagement",
+   "Leads",
+   "Sales"
+  ],
+  "endTitle": "Your brand, at the top of the feed.",
+  "endText": "One more scroll."
+ },
+ "welcome": {
+  "small": "Welcome to",
+  "line1": "AdsVentures",
+  "line2": "Lab",
+  "text": "Where brands climb higher on social media.",
+  "notifications": [
+   {
+    "icon": "user",
+    "title": "New follower",
+    "sub": "just now"
+   },
+   {
+    "icon": "heart",
+    "title": "Your reel is trending",
+    "sub": "2 min ago"
+   },
+   {
+    "icon": "target",
+    "title": "New lead from Meta ads",
+    "sub": "5 min ago"
+   },
+   {
+    "icon": "bag",
+    "title": "New order received",
+    "sub": "8 min ago"
+   }
+  ]
+ },
+ "about": {
+  "kicker": "About us",
+  "title": "Every name made us *better.*",
+  "text": "Our journey has four names. At every step we picked up something new and got better at what we do for our clients. This is how AdsVentures Lab was built.",
+  "chapters": [
+   {
+    "chapter": "Where it all began",
+    "name": "FMH",
+    "full": "Friend Media Hub",
+    "year": "",
+    "text": "It started with a love for social media and a simple goal: help local brands look great online.",
+    "adopted": "Content creation for local brands",
+    "improved": "Learning what makes people stop and watch"
+   },
+   {
+    "chapter": "Learning to grow",
+    "name": "AdvertRising Media",
+    "full": "",
+    "year": "",
+    "text": "We went deeper into advertising and took on bigger brands.",
+    "adopted": "Paid advertising on Meta",
+    "improved": "Turning content into leads, not just likes"
+   },
+   {
+    "chapter": "Finding our edge",
+    "name": "HOG Digital",
+    "full": "",
+    "year": "",
+    "text": "We sharpened our craft and built a clear way of working.",
+    "adopted": "Planned content calendars and monthly reports",
+    "improved": "Results clients can measure every month"
+   },
+   {
+    "chapter": "Ready for the summit",
+    "name": "AdsVentures Lab",
+    "full": "",
+    "year": "",
+    "text": "Today the founders lead the lab with one vision: take social media marketing to the next level.",
+    "adopted": "DSLR production and full branding",
+    "improved": "One team for strategy, shoot, edit and ads",
+    "final": true
+   }
+  ],
+  "founders": [
+   {
+    "name": "[Founder name]",
+    "role": "Co-founder",
+    "photo": ""
+   },
+   {
+    "name": "[Founder name]",
+    "role": "Co-founder",
+    "photo": ""
+   }
+  ]
+ },
+ "trusted": {
+  "kicker": "Brands that trust us",
+  "button": "View all brands"
+ },
+ "clients": {
+  "kicker": "Our clients",
+  "title": "Brands we've worked with",
+  "text": "Pick an industry to see the brands we've worked with in it.",
+  "list": [
+   {
+    "name": "[Brand 01]",
+    "industry": "FMCG",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 02]",
+    "industry": "Textile",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 03]",
+    "industry": "Pet industry",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 04]",
+    "industry": "Food & Beverage",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 05]",
+    "industry": "Real estate",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 06]",
+    "industry": "FMCG",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 07]",
+    "industry": "Healthcare",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 08]",
+    "industry": "Textile",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 09]",
+    "industry": "Fashion",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 10]",
+    "industry": "Food & Beverage",
+    "logo": "",
+    "featured": true
+   },
+   {
+    "name": "[Brand 11]",
+    "industry": "Pet industry",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 12]",
+    "industry": "FMCG",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 13]",
+    "industry": "Real estate",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 14]",
+    "industry": "Fashion",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 15]",
+    "industry": "Healthcare",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 16]",
+    "industry": "Textile",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 17]",
+    "industry": "Food & Beverage",
+    "logo": "",
+    "featured": false
+   },
+   {
+    "name": "[Brand 18]",
+    "industry": "FMCG",
+    "logo": "",
+    "featured": false
+   }
+  ]
+ },
+ "services": {
+  "kicker": "Our services",
+  "title": "What we do",
+  "text": "Everything your brand needs to show up, stand out and sell on Instagram and Facebook.",
+  "items": [
+   {
+    "icon": "calendar",
+    "title": "Content planning",
+    "text": "A monthly content calendar with ideas, hooks and scripts made for your audience.",
+    "includes": [
+     "Monthly calendar",
+     "Hooks and scripts",
+     "Trend research"
+    ],
+    "image": "",
+    "art": "calendar"
+   },
+   {
+    "icon": "camera",
+    "title": "Reel shoots",
+    "text": "Our crew shoots at your location on iPhone or DSLR, depending on your package.",
+    "includes": [
+     "iPhone shoots",
+     "DSLR shoots",
+     "On-location crew"
+    ],
+    "image": "",
+    "art": "shoot"
+   },
+   {
+    "icon": "scissors",
+    "title": "Video editing",
+    "text": "Fast cuts, colour, captions and sound so people watch till the end.",
+    "includes": [
+     "Captions",
+     "Colour grading",
+     "Music and sound"
+    ],
+    "image": "",
+    "art": "edit"
+   },
+   {
+    "icon": "target",
+    "title": "Meta ads",
+    "text": "We run ads on Instagram and Facebook to reach people who are ready to buy.",
+    "includes": [
+     "Campaign setup",
+     "Audience targeting",
+     "Daily optimisation"
+    ],
+    "image": "",
+    "art": "ads"
+   },
+   {
+    "icon": "compass",
+    "title": "Branding",
+    "text": "Brand strategy, message and look, so every post feels like you.",
+    "includes": [
+     "Brand strategy",
+     "Brand message",
+     "Brand guidelines"
+    ],
+    "image": "",
+    "art": "brand"
+   },
+   {
+    "icon": "chart",
+    "title": "Monthly reports",
+    "text": "Reach, leads and spend in one simple report, with clear next steps.",
+    "includes": [
+     "Performance report",
+     "Insights",
+     "Next month plan"
+    ],
+    "image": "",
+    "art": "report"
+   }
+  ]
+ },
+ "achievements": {
+  "kicker": "Our achievements",
+  "title": "Numbers we're *proud* of",
+  "text": "Every brand we work with adds to these numbers.",
+  "note": "Sample numbers. Replace with your real figures.",
+  "items": [
+   {
+    "value": 50,
+    "suffix": "+",
+    "label": "Brands served"
+   },
+   {
+    "value": 1200,
+    "suffix": "+",
+    "label": "Reels delivered"
+   },
+   {
+    "value": 10,
+    "suffix": "M+",
+    "label": "Views generated"
+   },
+   {
+    "value": 90,
+    "suffix": "%",
+    "label": "Clients who stay with us"
+   }
+  ],
+  "ticker": [
+   "More reach",
+   "More engagement",
+   "More leads",
+   "More sales"
+  ]
+ },
+ "portfolio": {
+  "kicker": "Portfolio",
+  "title": "Our work",
+  "text": "Graphics, creative ads and real Meta ads results from the brands we work with.",
+  "graphics": {
+   "title": "Graphics",
+   "text": "Posts, carousels and brand visuals. Keep scrolling to move through the wall.",
+   "items": [
+    {
+     "title": "[Post title]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "tall"
+    },
+    {
+     "title": "[Carousel]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "square"
+    },
+    {
+     "title": "[Festive post]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "wide"
+    },
+    {
+     "title": "[Launch post]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "tall"
+    },
+    {
+     "title": "[Offer creative]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "square"
+    },
+    {
+     "title": "[Brand visual]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "wide"
+    },
+    {
+     "title": "[Story design]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "tall"
+    },
+    {
+     "title": "[Menu design]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "square"
+    },
+    {
+     "title": "[Post title]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "wide"
+    },
+    {
+     "title": "[Post title]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "tall"
+    },
+    {
+     "title": "[Post title]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "square"
+    },
+    {
+     "title": "[Post title]",
+     "client": "[Brand]",
+     "image": "",
+     "size": "tall"
+    }
+   ],
+   "seeAll": "See all graphics",
+   "showOnHome": 8
+  },
+  "ads": {
+   "title": "Creative ads",
+   "text": "Vertical reels and horizontal video ads, the message behind each one, and how we made it.",
+   "items": [
+    {
+     "title": "[Ad title]",
+     "client": "[Brand · Industry]",
+     "video": "",
+     "poster": "",
+     "message": "[What message the ad was trying to deliver, in one or two sentences.]",
+     "how": "[How we made it: the idea, the shoot, the edit.]",
+     "orientation": "vertical"
+    },
+    {
+     "title": "[Ad title]",
+     "client": "[Brand · Industry]",
+     "video": "",
+     "poster": "",
+     "message": "[What message the ad was trying to deliver.]",
+     "how": "[How we made it.]",
+     "orientation": "horizontal"
+    },
+    {
+     "title": "[Ad title]",
+     "client": "[Brand · Industry]",
+     "video": "",
+     "poster": "",
+     "message": "[What message the ad was trying to deliver.]",
+     "how": "[How we made it.]",
+     "orientation": "vertical"
+    },
+    {
+     "title": "[Ad title]",
+     "client": "[Brand · Industry]",
+     "video": "",
+     "poster": "",
+     "message": "[What message the ad was trying to deliver.]",
+     "how": "[How we made it.]",
+     "orientation": "horizontal"
+    },
+    {
+     "title": "[Ad title]",
+     "client": "[Brand · Industry]",
+     "video": "",
+     "poster": "",
+     "message": "[What message the ad was trying to deliver.]",
+     "how": "[How we made it.]",
+     "orientation": "vertical"
+    }
+   ],
+   "seeAll": "See all video ads",
+   "showOnHome": 3
+  },
+  "results": {
+   "title": "Meta ads results",
+   "text": "Real numbers from real campaigns.",
+   "note": "Placeholder results. Replace with your real campaign numbers.",
+   "items": [
+    {
+     "client": "[Brand]",
+     "industry": "[Industry]",
+     "objective": "Goal: more leads",
+     "kpis": [
+      {
+       "label": "Leads",
+       "value": "[000]"
+      },
+      {
+       "label": "Cost per lead",
+       "value": "[₹00]"
+      },
+      {
+       "label": "Reach",
+       "value": "[00K]"
+      },
+      {
+       "label": "ROAS",
+       "value": "[0.0×]"
+      }
+     ]
+    },
+    {
+     "client": "[Brand]",
+     "industry": "[Industry]",
+     "objective": "Goal: more online sales",
+     "kpis": [
+      {
+       "label": "Purchases",
+       "value": "[000]"
+      },
+      {
+       "label": "ROAS",
+       "value": "[0.0×]"
+      },
+      {
+       "label": "Reach",
+       "value": "[00K]"
+      },
+      {
+       "label": "CTR",
+       "value": "[0.0%]"
+      }
+     ]
+    },
+    {
+     "client": "[Brand]",
+     "industry": "[Industry]",
+     "objective": "Goal: more store visits",
+     "kpis": [
+      {
+       "label": "Reach",
+       "value": "[00K]"
+      },
+      {
+       "label": "Engagement",
+       "value": "[00K]"
+      },
+      {
+       "label": "Cost per result",
+       "value": "[₹00]"
+      },
+      {
+       "label": "Followers",
+       "value": "[+000]"
+      }
+     ]
+    },
+    {
+     "client": "[Brand]",
+     "industry": "[Industry]",
+     "objective": "Goal: more leads",
+     "kpis": [
+      {
+       "label": "Leads",
+       "value": "[000]"
+      },
+      {
+       "label": "Cost per lead",
+       "value": "[₹00]"
+      },
+      {
+       "label": "Reach",
+       "value": "[00K]"
+      },
+      {
+       "label": "ROAS",
+       "value": "[0.0×]"
+      }
+     ]
+    },
+    {
+     "client": "[Brand]",
+     "industry": "[Industry]",
+     "objective": "Goal: more online sales",
+     "kpis": [
+      {
+       "label": "Purchases",
+       "value": "[000]"
+      },
+      {
+       "label": "ROAS",
+       "value": "[0.0×]"
+      },
+      {
+       "label": "Reach",
+       "value": "[00K]"
+      },
+      {
+       "label": "CTR",
+       "value": "[0.0%]"
+      }
+     ]
+    }
+   ],
+   "seeAll": "See all results",
+   "showOnHome": 3
+  },
+  "allTitle": "All our work"
+ },
+ "process": {
+  "kicker": "How we work",
+  "title": "Five steps to the top",
+  "steps": [
+   {
+    "title": "Plan",
+    "text": "We study your business, audience and competitors, then plan a month of content.",
+    "spec": "Content calendar, 30 days"
+   },
+   {
+    "title": "Shoot",
+    "text": "Our crew comes to your location and shoots reels on iPhone or DSLR.",
+    "spec": "4K, vertical 9:16"
+   },
+   {
+    "title": "Edit",
+    "text": "We edit every reel with captions, music and colour, ready to post.",
+    "spec": "Cut, colour, captions, sound"
+   },
+   {
+    "title": "Promote",
+    "text": "We run Meta ads to show your best reels to the right people.",
+    "spec": "Instagram and Facebook ads"
+   },
+   {
+    "title": "Report",
+    "text": "Every month you get a clear report on what worked, and we plan the next month from it.",
+    "spec": "Reach, leads, cost per result"
+   }
+  ]
+ },
+ "testimonials": {
+  "kicker": "Testimonials",
+  "title": "What our clients say",
+  "text": "Watch our clients talk about working with us, or read their reviews.",
+  "videoTab": "Video reviews",
+  "textTab": "Written reviews",
+  "videos": [
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "video": "",
+    "poster": "",
+    "photo": "",
+    "quote": "[Short line from the video review.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "video": "",
+    "poster": "",
+    "photo": "",
+    "quote": "[Short line from the video review.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "video": "",
+    "poster": "",
+    "photo": "",
+    "quote": "[Short line from the video review.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "video": "",
+    "poster": "",
+    "photo": "",
+    "quote": "[Short line from the video review.]"
+   }
+  ],
+  "reviews": [
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "rating": 5,
+    "text": "[Client review. One or two sentences about the result they saw.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "rating": 5,
+    "text": "[Client review about working with the team.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "rating": 5,
+    "text": "[Client review about the content quality.]"
+   },
+   {
+    "name": "[Client name]",
+    "company": "[Company]",
+    "rating": 5,
+    "text": "[Client review about the ads and leads.]"
+   }
+  ]
+ },
+ "packages": {
+  "kicker": "Packages",
+  "title": "Choose your package",
+  "text": "Three clear packages. Not sure which one fits? We'll help you choose on a free call.",
+  "items": [
+   {
+    "id": "starter",
+    "name": "Starter",
+    "tag": "iPhone shoot",
+    "level": 1,
+    "altitude": "Base camp",
+    "for": "For brands that want regular, good-looking content without a big budget.",
+    "featured": false,
+    "badge": "",
+    "features": [
+     "Monthly content plan",
+     "Reels shot on iPhone",
+     "Professional editing",
+     "Meta ads management",
+     "Monthly report"
+    ],
+    "button": "Choose Starter"
+   },
+   {
+    "id": "pro",
+    "name": "Pro",
+    "tag": "DSLR shoot",
+    "level": 3,
+    "altitude": "Summit",
+    "for": "For brands that want a premium, cinematic look and deeper insights.",
+    "featured": true,
+    "badge": "Most complete",
+    "features": [
+     "+Everything in Starter",
+     "Reels shot on DSLR camera",
+     "Cinematic colour grading",
+     "Detailed monthly report with insights"
+    ],
+    "button": "Choose Pro"
+   },
+   {
+    "id": "branding",
+    "name": "Brand Builder",
+    "tag": "Branding",
+    "level": 2,
+    "altitude": "The map",
+    "for": "For new brands, or brands that want a fresh start.",
+    "featured": false,
+    "badge": "",
+    "features": [
+     "Brand strategy",
+     "Brand message and tone of voice",
+     "Audience and competitor research",
+     "Logo direction and brand guidelines"
+    ],
+    "button": "Choose Brand Builder"
+   }
+  ]
+ },
+ "faq": {
+  "kicker": "FAQ",
+  "title": "Questions, answered",
+  "text": "Can't find your answer? Ask us on the free consultation call.",
+  "items": [
+   {
+    "q": "Do you work with my industry?",
+    "a": "Yes. We work with brands in every industry, from FMCG and textiles to pet brands, food, real estate and more."
+   },
+   {
+    "q": "What is the difference between Starter and Pro?",
+    "a": "Both include planning, shooting, editing, Meta ads and a monthly report. Starter is shot on iPhone. Pro is shot on a DSLR camera for a more cinematic look, and comes with a more detailed report."
+   },
+   {
+    "q": "Is the ad budget included in the package?",
+    "a": "[Confirm] The ad budget is paid directly to Meta and is separate from our fee. We help you decide how much to spend."
+   },
+   {
+    "q": "When will I see results?",
+    "a": "[Confirm] Most brands see better reach and engagement in the first month. Leads and sales usually grow over two to three months as we learn what works."
+   },
+   {
+    "q": "Do I need to be present for the shoot?",
+    "a": "Not always. We plan everything with you first, then our crew handles the shoot at your location."
+   },
+   {
+    "q": "How do I get started?",
+    "a": "Fill in the form below. We'll call you, understand your goals and suggest the right package."
+   }
+  ]
+ },
+ "gallery": {
+  "kicker": "Gallery",
+  "title": "Life at the Lab",
+  "text": "Our office, our shoots, our events and the people behind the work.",
+  "filters": [
+   "All",
+   "Office",
+   "Events",
+   "Team",
+   "Shoots"
+  ],
+  "items": [
+   {
+    "image": "",
+    "caption": "[Office photo]",
+    "category": "Office",
+    "ratio": "4/5"
+   },
+   {
+    "image": "",
+    "caption": "[Event photo]",
+    "category": "Events",
+    "ratio": "4/3"
+   },
+   {
+    "image": "",
+    "caption": "[Team photo]",
+    "category": "Team",
+    "ratio": "1/1"
+   },
+   {
+    "image": "",
+    "caption": "[Shoot photo]",
+    "category": "Shoots",
+    "ratio": "3/4"
+   },
+   {
+    "image": "",
+    "caption": "[Event photo]",
+    "category": "Events",
+    "ratio": "16/10"
+   },
+   {
+    "image": "",
+    "caption": "[Office photo]",
+    "category": "Office",
+    "ratio": "1/1"
+   },
+   {
+    "image": "",
+    "caption": "[Shoot photo]",
+    "category": "Shoots",
+    "ratio": "4/5"
+   },
+   {
+    "image": "",
+    "caption": "[Team photo]",
+    "category": "Team",
+    "ratio": "4/3"
+   },
+   {
+    "image": "",
+    "caption": "[Event photo]",
+    "category": "Events",
+    "ratio": "3/4"
+   }
+  ]
+ },
+ "contact": {
+  "kicker": "Contact",
+  "title": "Get a free consultation",
+  "text": "Tell us about your brand. We'll reply within one working day.",
+  "button": "Send my inquiry",
+  "privacy": "We only use your details to reply to you. No spam.",
+  "details": [
+   {
+    "label": "Email",
+    "value": "adsventureslab@gmail.com"
+   },
+   {
+    "label": "Phone",
+    "value": "[Phone number]"
+   },
+   {
+    "label": "Location",
+    "value": "[City, Country]"
+   },
+   {
+    "label": "Instagram",
+    "value": "[@handle]"
+   }
+  ]
+ },
+ "careers": {
+  "kicker": "Careers",
+  "title": "Climb with *the crew.*",
+  "text": "We're always looking for creative people who love social media. See our open positions and apply in two minutes.",
+  "perks": [
+   {
+    "title": "Real brands, real work",
+    "text": "Work on live campaigns from your first week."
+   },
+   {
+    "title": "Learn fast",
+    "text": "Shoot, edit, plan and run ads side by side with the founders."
+   },
+   {
+    "title": "Grow with us",
+    "text": "A small team where good work gets noticed quickly."
+   }
+  ],
+  "openTitle": "Open positions",
+  "note": "Sample roles. Replace with your real openings.",
+  "applyTitle": "Apply now",
+  "jobs": [
+   {
+    "title": "Video Editor",
+    "type": "Full-time",
+    "location": "[City] · On-site",
+    "experience": "1+ years",
+    "about": "Edit short-form reels and ads for brands across industries.",
+    "duties": [
+     "Edit reels with captions, music and colour",
+     "Turn raw shoots into scroll-stopping videos",
+     "Keep up with trends and formats"
+    ],
+    "open": true
+   },
+   {
+    "title": "Social Media Manager",
+    "type": "Full-time",
+    "location": "[City] · On-site",
+    "experience": "2+ years",
+    "about": "Plan and manage content calendars for our clients.",
+    "duties": [
+     "Plan monthly content",
+     "Write hooks, scripts and captions",
+     "Coordinate shoots with the crew"
+    ],
+    "open": true
+   },
+   {
+    "title": "Meta Ads Specialist",
+    "type": "Full-time",
+    "location": "[City] · Hybrid",
+    "experience": "2+ years",
+    "about": "Run and optimise Meta ad campaigns that bring leads and sales.",
+    "duties": [
+     "Set up and manage campaigns",
+     "Test audiences and creatives",
+     "Report results to clients"
+    ],
+    "open": true
+   },
+   {
+    "title": "Content Creator Intern",
+    "type": "Internship",
+    "location": "[City] · On-site",
+    "experience": "Fresher",
+    "about": "Help us shoot and create content for our clients.",
+    "duties": [
+     "Assist on shoots",
+     "Create content ideas",
+     "Learn editing and planning"
+    ],
+    "open": true
+   }
+  ],
+  "homeText": "We're hiring. Join the team that helps brands grow on social media.",
+  "homeButton": "See all jobs and apply"
+ },
+ "footer": {
+  "text": "Social media marketing for brands in every industry. Planned, shot, edited and promoted by one team.",
+  "copyright": "© 2026 AdsVentures Lab",
+  "links": [
+   {
+    "label": "About Us",
+    "href": "#about"
+   },
+   {
+    "label": "Services",
+    "href": "#services"
+   },
+   {
+    "label": "Portfolio",
+    "href": "#portfolio"
+   },
+   {
+    "label": "Packages",
+    "href": "#packages"
+   },
+   {
+    "label": "Our Clients",
+    "href": "#clients"
+   },
+   {
+    "label": "Gallery",
+    "href": "#gallery"
+   },
+   {
+    "label": "Careers",
+    "href": "#careers"
+   },
+   {
+    "label": "Contact",
+    "href": "#contact"
+   }
+  ]
+ },
+ "forms": {
+  "sent": "We got it and will reply within one working day."
+ }
+}

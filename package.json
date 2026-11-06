@@ -1,0 +1,10 @@
+{
+  "name": "adsventures-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AdsVentures Lab website with a hidden admin panel. Runs on Netlify (free) with Firestore and Cloudinary. No third-party packages.",
+  "engines": { "node": ">=18" },
+  "scripts": { "dev": "node dev-server.mjs" },
+  "license": "UNLICENSED"
+}
