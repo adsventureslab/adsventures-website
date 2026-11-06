@@ -67,6 +67,9 @@ button{font:inherit;color:inherit}
 .loader{position:fixed;inset:0;z-index:250;background:var(--paper);display:grid;place-items:center}
 .lg{position:relative;width:min(560px,80vw);aspect-ratio:1000/193}
 .lg img{position:absolute;inset:0;width:100%;height:100%}
+/* hide the logo pieces until the animation starts, so the full logo never flashes */
+#lg-a,#lg-dot{opacity:0}#lg-rest{clip-path:inset(0 100% 0 0)}#lg-d{visibility:hidden}
+.loader.show-all #lg-a,.loader.show-all #lg-dot{opacity:1}.loader.show-all #lg-rest{clip-path:none}.loader.show-all #lg-d{visibility:visible}
 .loader-bar{position:absolute;left:50%;bottom:calc(max(32px,env(safe-area-inset-bottom,0px)) + 8px);width:120px;height:2px;margin-left:-60px;background:var(--line);overflow:hidden;border-radius:2px}
 .loader-bar i{display:block;height:100%;background:var(--orange);transform-origin:left;transform:scaleX(0)}
 

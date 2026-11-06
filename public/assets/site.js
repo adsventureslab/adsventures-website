@@ -455,12 +455,13 @@ function runLoader(done){
   document.body.classList.add("locked");if(lenis)lenis.stop();window.scrollTo(0,0);
   var D=document.getElementById("lg-d"),A=document.getElementById("lg-a"),RS=document.getElementById("lg-rest"),DT=document.getElementById("lg-dot"),bar=document.getElementById("lbar");
   function finish(){document.body.classList.remove("locked");if(lenis)lenis.start();ld.remove();done()}
-  if(reduced){gsap.to(ld,{opacity:0,duration:.4,delay:.6,onComplete:finish});return}
+  if(reduced){ld.classList.add("show-all");gsap.to(ld,{opacity:0,duration:.4,delay:.6,onComplete:finish});return}
   var origin="15.8% 49.5%";
   gsap.set(D,{xPercent:-120,rotation:-540,transformOrigin:origin});
   gsap.set(A,{x:"18%",opacity:0});
   gsap.set(RS,{clipPath:"inset(0 100% 0 0)"});
   gsap.set(DT,{y:-160,opacity:0});
+  gsap.set(D,{visibility:"visible"});
   var tl=gsap.timeline({onComplete:finish});
   tl.to(bar,{scaleX:1,duration:2.6,ease:"power1.inOut"},0)
     .to(D,{xPercent:0,rotation:0,duration:1.15,ease:"power3.out"},.15)
