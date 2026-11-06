@@ -9,6 +9,10 @@
 <meta property="og:description" content="__SEO_DESC__">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/logo.png">
+<link rel="preload" as="script" href="/vendor/gsap.min.js">
+<link rel="preload" as="script" href="/vendor/ScrollTrigger.min.js">
+<link rel="preload" as="script" href="/vendor/lenis.min.js">
+<link rel="preload" as="script" href="/assets/site.js">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
@@ -68,7 +72,7 @@ button{font:inherit;color:inherit}
 .lg{position:relative;width:min(560px,80vw);aspect-ratio:1000/193}
 .lg img{position:absolute;inset:0;width:100%;height:100%}
 /* hide the logo pieces until the animation starts, so the full logo never flashes */
-#lg-a,#lg-dot{opacity:0}#lg-rest{clip-path:inset(0 100% 0 0)}#lg-d{visibility:hidden}
+#lg-a,#lg-dot{opacity:0}#lg-rest{clip-path:inset(0 100% 0 0)}#lg-d{visibility:hidden;will-change:transform}#lg-a,#lg-rest,#lg-dot{will-change:transform,opacity}
 .loader.show-all #lg-a,.loader.show-all #lg-dot{opacity:1}.loader.show-all #lg-rest{clip-path:none}.loader.show-all #lg-d{visibility:visible}
 .loader-bar{position:absolute;left:50%;bottom:calc(max(32px,env(safe-area-inset-bottom,0px)) + 8px);width:120px;height:2px;margin-left:-60px;background:var(--line);overflow:hidden;border-radius:2px}
 .loader-bar i{display:block;height:100%;background:var(--orange);transform-origin:left;transform:scaleX(0)}
@@ -390,7 +394,7 @@ main{position:relative;z-index:3}
 
 /* Packages */
 .packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;perspective:1600px}
-.pkg{--gx:50%;--gy:0%;position:relative;display:flex;flex-direction:column;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--line);overflow:hidden;transform-style:preserve-3d;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.pkg{--gx:50%;--gy:0%;position:relative;display:flex;flex-direction:column;border-radius:var(--r-lg);background:var(--white);border:1px solid var(--line);overflow:hidden;transform-style:preserve-3d;transition:box-shadow .6s var(--ease)}
 .pkg::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(500px circle at var(--gx) var(--gy),rgba(243,111,37,.12),transparent 40%);opacity:0;transition:opacity .4s}
 .pkg:hover::after{opacity:1}
 .pkg:hover{box-shadow:0 40px 80px -46px rgba(20,20,22,.5)}
