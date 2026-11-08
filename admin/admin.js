@@ -392,6 +392,9 @@ function mediaField(obj, k, id) {
   return wrap;
 }
 function upload(file, onProgress) {
+  var isVid = /^video\//.test(file.type) || /\.(mp4|mov|webm)$/i.test(file.name);
+  if (isVid && file.size > 100 * 1024 * 1024) return Promise.reject(new Error('This video is ' + fmtSize(file.size) + '. The free plan allows up to 100 MB. Export it smaller (1080p is plenty) and try again.'));
+  if (!isVid && file.size > 10 * 1024 * 1024) return Promise.reject(new Error('This image is ' + fmtSize(file.size) + '. The free plan allows up to 10 MB. Save it as a JPG or WEBP and try again.'));
   // 1) our server signs the upload, 2) the browser sends the file straight to Cloudinary
   return api('upload/sign', { method: 'POST', body: { name: file.name.slice(0, 80) } }).then(function (sig) {
     return new Promise(function (resolve, reject) {
@@ -482,7 +485,7 @@ function renderMedia() {
     fs.reduce(function (p, f) { return p.then(function () { return upload(f, function () {}).then(function () { done++; }).catch(function (e) { toast(f.name + ': ' + e.message, true); }); }); }, Promise.resolve())
       .then(function () { note.replaceChildren(); toast(done + ' file(s) uploaded.'); load(); });
   });
-  mainEl.replaceChildren(h('div', { class: 'page-h' }, [h('h1', { text: 'Media library' }), h('p', { text: 'Every image and video you’ve uploaded. Files used on the website can’t be deleted.' })]),
+  mainEl.replaceChildren(h('div', { class: 'page-h' }, [h('h1', { text: 'Media library' }), h('p', { text: 'Every image and video you’ve uploaded. Files used on the website can’t be deleted. Tip: the free plan covers about 25 GB a month for storage and visitor views combined, so delete files you no longer use and keep videos short.' })]),
     h('div', { style: 'margin-bottom:16px' }, [h('label', { class: 'btn primary', for: 'lib-up' }, [icon('upload'), 'Upload files']), file]), note, grid);
   function load() {
     api('media').then(function (r) {
