@@ -479,6 +479,8 @@ function runLoader(done){
     .to(DT,{y:0,opacity:1,duration:.55,ease:"bounce.out"},1.3)
     .to("#lg",{scale:.94,opacity:0,duration:.35,ease:"power2.in"},2.0)
     .to(ld,{clipPath:"inset(0 0 100% 0)",duration:.7,ease:"expo.inOut"},2.1);
+  var seen=false;try{seen=sessionStorage.getItem("av_seen")==="1";sessionStorage.setItem("av_seen","1")}catch(e){}
+  if(seen)tl.timeScale(3);
   ld.addEventListener("click",function(){tl.progress(1)});
 }
 
