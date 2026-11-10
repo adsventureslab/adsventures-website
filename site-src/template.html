@@ -340,7 +340,7 @@ main{position:relative;z-index:3}
 .proc-svg .camp text{font:700 22px var(--f-body);fill:var(--ink)}
 .proc-svg .camp circle.c{fill:var(--white);stroke:var(--line);stroke-width:4;transition:fill .4s,stroke .4s}
 .proc-svg .camp.on circle.c{fill:var(--orange);stroke:var(--orange)}
-@media (max-width:899px){.proc-grid{grid-template-columns:1fr;gap:12px}.proc-left{min-height:300px}.pnum{font-size:96px}}
+@media (max-width:899px){.proc-grid{grid-template-columns:1fr;gap:12px}.proc-left{min-height:350px}.pnum{font-size:80px}.psteps p{font-size:15px}}
 .reduced .proc-pin,.static-proc .proc-pin{height:auto;padding-block:40px}
 .static-proc .pst{position:relative;opacity:1;transform:none;margin-bottom:28px}
 .static-proc .psteps{min-height:0}
@@ -912,6 +912,14 @@ footer{position:relative;z-index:3;border-top:1px solid var(--line);padding-bloc
   </section>
 
   <!-- OPEN POSITIONS (hidden when no jobs) -->
+  <section class="section" id="faq" data-bg="paper" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="s-head"><span class="kicker" data-text="faq.kicker"></span><h2 id="faq-title" data-text="faq.title"></h2><p data-text="faq.text"></p></div>
+      <div class="faq-list" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
   <section class="section" id="openings" data-bg="white" aria-labelledby="open-title" hidden>
     <div class="wrap">
       <div class="s-head"><span class="kicker" data-text="careers.kicker"></span><h2 id="open-title" data-text="careers.openTitle"></h2><p data-text="careers.homeText"></p></div>
@@ -921,14 +929,6 @@ footer{position:relative;z-index:3;border-top:1px solid var(--line);padding-bloc
   </section>
 
   <!-- FAQ -->
-  <section class="section" id="faq" data-bg="paper" aria-labelledby="faq-title">
-    <div class="wrap faq-grid">
-      <div class="s-head"><span class="kicker" data-text="faq.kicker"></span><h2 id="faq-title" data-text="faq.title"></h2><p data-text="faq.text"></p></div>
-      <div class="faq-list" id="faq-list"></div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
   <section class="section" id="gallery" data-bg="stone" aria-labelledby="gal-title">
     <div class="wrap">
       <div class="s-head"><span class="kicker" data-text="gallery.kicker"></span><h2 id="gal-title" data-text="gallery.title"></h2><p data-text="gallery.text"></p></div>

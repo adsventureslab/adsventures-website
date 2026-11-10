@@ -57,8 +57,8 @@
  },
  "hero": {
   "tagline": "AdsVentures Lab, social media marketing agency",
-  "title": "Climb to get *higher opportunities.*",
-  "subtitle": "Reels, content and Meta ads that move your brand up, one step at a time.",
+  "title": "Get more leads, *not just likes.*",
+  "subtitle": "We plan content, shoot reels and run Meta ads that bring you enquiries and sales you can count.",
   "scrollHint": "Scroll down to reveal",
   "milestones": [
    "Reach",
@@ -73,7 +73,7 @@
   "small": "Welcome to",
   "line1": "AdsVentures",
   "line2": "Lab",
-  "text": "Where brands climb higher on social media.",
+  "text": "Where social media turns into leads and sales.",
   "notifications": [
    {
     "icon": "user",
@@ -99,44 +99,44 @@
  },
  "about": {
   "kicker": "About us",
-  "title": "Every name made us *better.*",
-  "text": "Our journey has four names. At every step we picked up something new and got better at what we do for our clients. This is how AdsVentures Lab was built.",
+  "title": "Every name taught us *something.*",
+  "text": "Our journey has four names. At every step we learned something new, saw what really brings results, and kept improving the way we work for our clients. This is how AdsVentures Lab was built.",
   "chapters": [
    {
     "chapter": "Where it all began",
     "name": "FMH",
     "full": "Friend Media Hub",
     "year": "",
-    "text": "It started with a love for social media and a simple goal: help local brands look great online.",
-    "adopted": "Content creation for local brands",
-    "improved": "Learning what makes people stop and watch"
+    "text": "It started with a group of friends who loved social media and wanted to help local brands look good online.",
+    "adopted": "What makes people stop scrolling and watch",
+    "improved": "Our first local brands started getting noticed"
    },
    {
     "chapter": "Learning to grow",
     "name": "AdvertRising Media",
     "full": "",
     "year": "",
-    "text": "We went deeper into advertising and took on bigger brands.",
-    "adopted": "Paid advertising on Meta",
-    "improved": "Turning content into leads, not just likes"
+    "text": "We began running ads and quickly learned that good content must also bring business.",
+    "adopted": "How to turn views into real enquiries",
+    "improved": "Clients started getting leads, not just likes"
    },
    {
     "chapter": "Finding our edge",
     "name": "HOG Digital",
     "full": "",
     "year": "",
-    "text": "We sharpened our craft and built a clear way of working.",
-    "adopted": "Planned content calendars and monthly reports",
-    "improved": "Results clients can measure every month"
+    "text": "We worked with brands across many industries and built a clear system for planning, testing and reviewing results.",
+    "adopted": "Reading the numbers and improving every month",
+    "improved": "Steady growth that clients could measure"
    },
    {
     "chapter": "Ready for the summit",
     "name": "AdsVentures Lab",
     "full": "",
     "year": "",
-    "text": "Today the founders lead the lab with one vision: take social media marketing to the next level.",
-    "adopted": "DSLR production and full branding",
-    "improved": "One team for strategy, shoot, edit and ads",
+    "text": "Today the founders bring every lesson together in one lab, with one goal: real growth for every brand we work with.",
+    "adopted": "New platforms, trends and ad tools, tested before we use them",
+    "improved": "Strategy, creative and ads working together for leads and sales",
     "final": true
    }
   ],
@@ -275,51 +275,52 @@
  "services": {
   "kicker": "Our services",
   "title": "What we do",
-  "text": "Everything your brand needs to show up, stand out and sell on Instagram and Facebook.",
+  "text": "We don't just post content. Every service is built around one goal: more enquiries and sales for your business.",
   "items": [
    {
     "icon": "calendar",
-    "title": "Content planning",
-    "text": "A monthly content calendar with ideas, hooks and scripts made for your audience.",
+    "title": "Strategy before content",
+    "text": "Every month starts with a plan built around your goals, your customers and what is working in your industry. No random posting.",
     "includes": [
-     "Monthly calendar",
-     "Hooks and scripts",
-     "Trend research"
+     "Audience research",
+     "Monthly content plan",
+     "Hooks and scripts"
     ],
     "image": "",
     "art": "calendar"
    },
    {
     "icon": "camera",
-    "title": "Reel shoots",
-    "text": "Our crew shoots at your location on iPhone or DSLR, depending on your package.",
+    "title": "Shoots that sell",
+    "text": "Our crew shoots at your location on iPhone or DSLR. We plan and direct every shot so your product, team and story look their best.",
     "includes": [
-     "iPhone shoots",
-     "DSLR shoots",
-     "On-location crew"
+     "iPhone and DSLR shoots",
+     "Shot planning",
+     "On-location direction"
     ],
     "image": "",
     "art": "shoot"
    },
    {
     "icon": "scissors",
-    "title": "Video editing",
-    "text": "Fast cuts, colour, captions and sound so people watch till the end.",
+    "title": "Edits that hold attention",
+    "text": "The first 3 seconds decide if people watch. We edit with strong hooks, clean captions, colour and sound so they stay till the end.",
     "includes": [
-     "Captions",
-     "Colour grading",
-     "Music and sound"
+     "Hook-first editing",
+     "Captions and sound",
+     "Colour grading"
     ],
     "image": "",
     "art": "edit"
    },
    {
     "icon": "target",
-    "title": "Meta ads",
-    "text": "We run ads on Instagram and Facebook to reach people who are ready to buy.",
+    "title": "Ads that bring leads",
+    "text": "We show your best content to the people most likely to buy, then keep testing and improving to bring down your cost per lead.",
     "includes": [
      "Campaign setup",
      "Audience targeting",
+     "Creative testing",
      "Daily optimisation"
     ],
     "image": "",
@@ -327,8 +328,8 @@
    },
    {
     "icon": "compass",
-    "title": "Branding",
-    "text": "Brand strategy, message and look, so every post feels like you.",
+    "title": "A brand people trust",
+    "text": "A clear message, look and voice used the same way everywhere, so people remember you and trust you faster.",
     "includes": [
      "Brand strategy",
      "Brand message",
@@ -339,11 +340,11 @@
    },
    {
     "icon": "chart",
-    "title": "Monthly reports",
-    "text": "Reach, leads and spend in one simple report, with clear next steps.",
+    "title": "Reports you can act on",
+    "text": "No confusing numbers. Every month you see your reach, leads and cost per lead, what worked, and exactly what we will do next.",
     "includes": [
-     "Performance report",
-     "Insights",
+     "Leads and cost per lead",
+     "What worked and why",
      "Next month plan"
     ],
     "image": "",
@@ -662,32 +663,32 @@
  },
  "process": {
   "kicker": "How we work",
-  "title": "Five steps to the top",
+  "title": "How we grow your brand",
   "steps": [
    {
-    "title": "Plan",
-    "text": "We study your business, audience and competitors, then plan a month of content.",
-    "spec": "Content calendar, 30 days"
+    "title": "Understand",
+    "text": "We study your business, your customers and why they buy. Who they are, what problems they have, what makes them trust a brand and what stops them from buying.",
+    "spec": "Target audience and buyer psychology"
    },
    {
-    "title": "Shoot",
-    "text": "Our crew comes to your location and shoots reels on iPhone or DSLR.",
-    "spec": "4K, vertical 9:16"
+    "title": "Research and plan",
+    "text": "We analyse your competitors and what is working in your industry, find the gaps, and build a monthly plan with clear goals for reach, leads or sales.",
+    "spec": "Competitor analysis and monthly strategy"
    },
    {
-    "title": "Edit",
-    "text": "We edit every reel with captions, music and colour, ready to post.",
-    "spec": "Cut, colour, captions, sound"
+    "title": "Create",
+    "text": "Hooks and scripts written for your audience, shot by our crew and edited so people watch, trust and take action.",
+    "spec": "Scripts, shoot and edit"
    },
    {
-    "title": "Promote",
-    "text": "We run Meta ads to show your best reels to the right people.",
-    "spec": "Instagram and Facebook ads"
+    "title": "Launch and promote",
+    "text": "We post at the right times and run Meta ads to the people most likely to buy, testing different creatives and audiences to find what works best.",
+    "spec": "Tested Meta ads campaigns"
    },
    {
-    "title": "Report",
-    "text": "Every month you get a clear report on what worked, and we plan the next month from it.",
-    "spec": "Reach, leads, cost per result"
+    "title": "Measure and improve",
+    "text": "We track which content and ads bring leads and at what cost. Every month you get a clear report, and the next plan is built on real numbers.",
+    "spec": "Leads, cost per lead, return on spend"
    }
   ]
  },

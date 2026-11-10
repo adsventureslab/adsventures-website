@@ -89,7 +89,7 @@ mount("stops",C.about.chapters.map(function(c,i){
     h("span",{class:"chapter",text:"Chapter "+(i+1)+(c.year?" · "+c.year:"")+" · "+c.chapter}),
     h("h3",{text:c.name}),c.full?h("div",{class:"abbr",text:c.full}):null,
     h("p",{text:c.text}),
-    h("dl",{class:"grow"},[h("div",null,[h("dt",null,[icon("plus"),"What we adopted"]),h("dd",{text:c.adopted})]),h("div",null,[h("dt",null,[icon("chart"),"What we improved"]),h("dd",{text:c.improved})])])
+    h("dl",{class:"grow"},[h("div",null,[h("dt",null,[icon("plus"),"What we learned"]),h("dd",{text:c.adopted})]),h("div",null,[h("dt",null,[icon("chart"),"The result"]),h("dd",{text:c.improved})])])
   ]);
   if(c.final&&C.about.founders&&C.about.founders.length){card.appendChild(h("div",{class:"founders"},C.about.founders.map(function(f){var src=media(stripT(f.photo));return h("div",{class:"founder"},[h("span",{class:"ph-img"},[src?h("img",{src:src,alt:f.name}):"Photo"]),h("span",null,[h("b",{text:f.name}),h("span",{text:f.role})])])})))}
   return h("li",{class:"stop"+(c.final?" final":"")},[h("span",{class:"node","aria-hidden":"true"}),card]);
@@ -222,7 +222,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape"&&allwork.cla
   svg.appendChild(s("path",{d:d,fill:"none",stroke:"#D9D7D0","stroke-width":"4","stroke-dasharray":"2 12","stroke-linecap":"round"}));
   svg.appendChild(s("path",{id:"proc-line",d:"M90 450 L170 480 L280 380 L360 420 L480 310 L570 350 L700 210 L790 260 L920 70",fill:"none",stroke:"#F36F25","stroke-width":"7","stroke-linecap":"round","stroke-linejoin":"round"}));
   var camps=[[90,450],[280,380],[480,310],[700,210],[920,70]];
-  camps.forEach(function(c,i){var g=s("g",{class:"camp"+(i===0?" on":""),"data-i":i});g.appendChild(s("circle",{class:"c",cx:c[0],cy:c[1],r:16}));var t=s("text",{x:c[0],y:c[1]-34,"text-anchor":"middle"});t.textContent=steps[i]?steps[i].title:"";g.appendChild(t);svg.appendChild(g)});
+  camps.forEach(function(c,i){var g=s("g",{class:"camp"+(i===0?" on":""),"data-i":i});g.appendChild(s("circle",{class:"c",cx:c[0],cy:c[1],r:16}));var last=i===camps.length-1,t=s("text",{x:last?c[0]-26:c[0],y:last?c[1]+8:c[1]-34,"text-anchor":last?"end":"middle"});t.textContent=steps[i]?steps[i].title:"";g.appendChild(t);svg.appendChild(g)});
   var mk=s("g",{id:"proc-marker"});mk.appendChild(s("line",{x1:0,y1:0,x2:0,y2:-70,stroke:"#141416","stroke-width":"4","stroke-linecap":"round"}));mk.appendChild(s("path",{d:"M2 -68 L52 -54 L2 -40Z",fill:"#F36F25"}));svg.appendChild(mk);
 })();
 
@@ -599,6 +599,13 @@ function initScroll(){
   document.querySelectorAll("img").forEach(function(im){if(!im.complete)im.addEventListener("load",softRefresh,{once:true})});
   document.querySelectorAll("video").forEach(function(v){v.addEventListener("loadedmetadata",softRefresh,{once:true})});
   if(window.ResizeObserver){var lastH=document.body.scrollHeight;new ResizeObserver(function(){var nh=document.body.scrollHeight;if(Math.abs(nh-lastH)>40){lastH=nh;softRefresh()}}).observe(document.body)}
+  /* safety net: an entrance animation must never stay half-done (tilted cards) if its scroll position was missed */
+  if("IntersectionObserver" in window){
+    var revMap=new Map();
+    ScrollTrigger.getAll().forEach(function(st){if(!st.vars.once||!st.animation||!st.trigger)return;var l=revMap.get(st.trigger)||[];l.push(st.animation);revMap.set(st.trigger,l)});
+    var revIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;revIO.unobserve(e.target);(revMap.get(e.target)||[]).forEach(function(a){setTimeout(function(){if(a.progress()<1&&!a.isActive())a.play()},400)})})},{threshold:0.12});
+    revMap.forEach(function(_,el){revIO.observe(el)});
+  }
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){ScrollTrigger.refresh()});
 }
 
