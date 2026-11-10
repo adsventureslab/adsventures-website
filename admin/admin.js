@@ -490,7 +490,12 @@ function importPack(files, note) {
         if (!f) { failed.push(j.item.file + ' (missing)'); return; }
         say('Uploading ' + n + ' of ' + jobs.length + ': ' + f.name + '…');
         return upload(f, function (x) { say('Uploading ' + n + ' of ' + jobs.length + ': ' + f.name + ' (' + Math.round(x * 100) + '%)'); })
-          .then(function (r) { j.item[j.key] = r.url; j.done = true; })
+          .then(function (r) {
+            j.item[j.key] = r.url; j.done = true;
+            var pf = j.item.poster && byName[j.item.poster]; // cover image shipped with a video
+            if (j.key === 'video' && pf) return upload(pf, function () {}).then(function (q) { j.item.poster = q.url; }).catch(function () { j.item.poster = ''; });
+            if (j.key === 'video' && !/^https:/.test(j.item.poster || '')) j.item.poster = '';
+          })
           .catch(function (e) { failed.push(f.name + ': ' + e.message); });
       });
     }, Promise.resolve()).then(function () {

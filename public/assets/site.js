@@ -22,7 +22,7 @@ function safeUrl(u){u=String(u||"");return /^(https?:|#|\/|data:image\/(png|jpe?
 /* Cloudinary files are served resized and compressed for the screen: smaller downloads, faster pages, fewer free credits used */
 var CLD=/^(https:\/\/res\.cloudinary\.com\/[^\/]+\/(image|video)\/upload\/)(?!(?:[a-z]{1,3}_[^\/]*\/))(.*)$/;
 function media(u,w){u=safeUrl(u);var m=CLD.exec(u);if(!m)return u;
-  return m[1]+(m[2]==="image"?(/\.gif$/i.test(m[3])?"q_auto,c_limit,w_"+(w||1600)+"/":"f_auto,q_auto,c_limit,w_"+(w||1600)+"/"):"q_auto,vc_auto,c_limit,w_"+(w||1080)+"/")+m[3]}
+  return m[1]+(m[2]==="image"?(/\.gif$/i.test(m[3])?"q_auto,c_limit,w_"+(w||1600)+"/":"f_auto,q_auto,c_limit,w_"+(w||1600)+"/"):"")+m[3]} /* videos play exactly as uploaded: full quality, and no 40 MB on-the-fly limit */
 function autoPoster(u){u=safeUrl(u);var m=CLD.exec(u);if(!m||m[2]!=="video")return "";return m[1]+"so_0,f_auto,q_auto,c_limit,w_900/"+m[3].replace(/\.[a-z0-9]+$/i,".jpg")}
 function stripT(u){return String(u||"").replace(/\/(image|video)\/upload\/(?:[a-z]{1,3}_[^\/]*\/)+/,"/$1/upload/")}
 var SVGNS="http://www.w3.org/2000/svg";
