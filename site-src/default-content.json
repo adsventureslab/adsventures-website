@@ -397,73 +397,85 @@
      "title": "[Post title]",
      "client": "[Brand]",
      "image": "",
-     "size": "tall"
+     "size": "tall",
+     "text": ""
     },
     {
      "title": "[Carousel]",
      "client": "[Brand]",
      "image": "",
-     "size": "square"
+     "size": "square",
+     "text": ""
     },
     {
      "title": "[Festive post]",
      "client": "[Brand]",
      "image": "",
-     "size": "wide"
+     "size": "wide",
+     "text": ""
     },
     {
      "title": "[Launch post]",
      "client": "[Brand]",
      "image": "",
-     "size": "tall"
+     "size": "tall",
+     "text": ""
     },
     {
      "title": "[Offer creative]",
      "client": "[Brand]",
      "image": "",
-     "size": "square"
+     "size": "square",
+     "text": ""
     },
     {
      "title": "[Brand visual]",
      "client": "[Brand]",
      "image": "",
-     "size": "wide"
+     "size": "wide",
+     "text": ""
     },
     {
      "title": "[Story design]",
      "client": "[Brand]",
      "image": "",
-     "size": "tall"
+     "size": "tall",
+     "text": ""
     },
     {
      "title": "[Menu design]",
      "client": "[Brand]",
      "image": "",
-     "size": "square"
+     "size": "square",
+     "text": ""
     },
     {
      "title": "[Post title]",
      "client": "[Brand]",
      "image": "",
-     "size": "wide"
+     "size": "wide",
+     "text": ""
     },
     {
      "title": "[Post title]",
      "client": "[Brand]",
      "image": "",
-     "size": "tall"
+     "size": "tall",
+     "text": ""
     },
     {
      "title": "[Post title]",
      "client": "[Brand]",
      "image": "",
-     "size": "square"
+     "size": "square",
+     "text": ""
     },
     {
      "title": "[Post title]",
      "client": "[Brand]",
      "image": "",
-     "size": "tall"
+     "size": "tall",
+     "text": ""
     }
    ],
    "seeAll": "See all graphics",

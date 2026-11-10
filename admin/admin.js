@@ -475,9 +475,45 @@ function exportCsv(items, tab) {
 }
 
 /* ---------------------------------------------------------------- media library */
+function importPack(files, note) {
+  var byName = {}; files.forEach(function (f) { byName[f.name] = f; });
+  var mf = byName['manifest.json'];
+  if (!mf) { toast('Choose the folder that has manifest.json in it.', true); return Promise.resolve(); }
+  var say = function (t) { note.replaceChildren(h('div', { class: 'ok', text: t })); };
+  return mf.text().then(function (txt) {
+    var m = JSON.parse(txt), jobs = [], failed = [];
+    [['graphics', 'image'], ['ads', 'video']].forEach(function (g) { (m[g[0]] || []).forEach(function (it) { jobs.push({ group: g[0], key: g[1], item: it }); }); });
+    var n = 0;
+    return jobs.reduce(function (p, j) {
+      return p.then(function () {
+        n++; var f = byName[j.item.file];
+        if (!f) { failed.push(j.item.file + ' (missing)'); return; }
+        say('Uploading ' + n + ' of ' + jobs.length + ': ' + f.name + '…');
+        return upload(f, function (x) { say('Uploading ' + n + ' of ' + jobs.length + ': ' + f.name + ' (' + Math.round(x * 100) + '%)'); })
+          .then(function (r) { j.item[j.key] = r.url; j.done = true; })
+          .catch(function (e) { failed.push(f.name + ': ' + e.message); });
+      });
+    }, Promise.resolve()).then(function () {
+      ['graphics', 'ads'].forEach(function (g) {
+        var sec = content.portfolio[g], fresh = jobs.filter(function (j) { return j.group === g && j.done; }).map(function (j) { var o = clone(j.item); delete o.file; return o; });
+        if (!fresh.length) return;
+        var same = function (a, b) { return a.title === b.title && a.client === b.client; };
+        var kept = sec.items.filter(function (x) { return !/^\[/.test(x.title || '') && !fresh.some(function (y) { return same(x, y); }); });
+        sec.items = fresh.concat(kept);
+      });
+      markDirty();
+      note.replaceChildren(h('div', { class: failed.length ? 'err' : 'ok' }, [jobs.length - failed.length + ' of ' + jobs.length + ' files added to Portfolio. Check them under Portfolio, then click Save & publish.', failed.length ? h('ul', null, failed.map(function (t) { return h('li', { text: t }); })) : null]));
+      toast('Portfolio pack imported. Click Save & publish when ready.');
+    });
+  }).catch(function (e) { toast('Could not read the pack: ' + e.message, true); });
+}
+
 function renderMedia() {
   var file = h('input', { type: 'file', class: 'sr', id: 'lib-up', multiple: true, accept: 'image/png,image/jpeg,image/webp,image/gif,video/mp4,video/webm,video/quicktime' });
   var grid = h('div', { class: 'lib' }, [h('p', { text: 'Loading…' })]);
+  // A portfolio pack is a folder with manifest.json plus the images and videos it lists.
+  var pack = h('input', { type: 'file', class: 'sr', id: 'pack-up', multiple: true, webkitdirectory: '' });
+  pack.addEventListener('change', function () { importPack([].slice.call(pack.files), note).then(function () { pack.value = ''; load(); }); });
   var note = h('div');
   file.addEventListener('change', function () {
     var fs = [].slice.call(file.files); var done = 0;
@@ -486,7 +522,7 @@ function renderMedia() {
       .then(function () { note.replaceChildren(); toast(done + ' file(s) uploaded.'); load(); });
   });
   mainEl.replaceChildren(h('div', { class: 'page-h' }, [h('h1', { text: 'Media library' }), h('p', { text: 'Every image and video you’ve uploaded. Files used on the website can’t be deleted. Tip: the free plan covers about 25 GB a month for storage and visitor views combined, so delete files you no longer use and keep videos short.' })]),
-    h('div', { style: 'margin-bottom:16px' }, [h('label', { class: 'btn primary', for: 'lib-up' }, [icon('upload'), 'Upload files']), file]), note, grid);
+    h('div', { style: 'margin-bottom:16px;display:flex;gap:10px;flex-wrap:wrap' }, [h('label', { class: 'btn primary', for: 'lib-up' }, [icon('upload'), 'Upload files']), file, h('label', { class: 'btn', for: 'pack-up' }, [icon('upload'), 'Import portfolio pack']), pack]), note, grid);
   function load() {
     api('media').then(function (r) {
       if (!r.items.length) { grid.replaceChildren(h('p', { class: 'empty', text: 'No files yet.' })); return; }
