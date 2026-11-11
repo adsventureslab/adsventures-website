@@ -185,7 +185,7 @@ function resCard(r,i){
   var d=pts.map(function(p,k){return (k?"L":"M")+p[0]+" "+p[1]}).join(" ");
   sp.appendChild(s("path",{d:d+" L300 90 L0 90Z",fill:"#F36F25","fill-opacity":".12"}));
   sp.appendChild(s("path",{class:"sl",d:d,fill:"none",stroke:"#F36F25","stroke-width":"3"}));
-  return h("article",{class:"res"},[h("div",{class:"res-top"},[h("b",{text:r.client}),h("span",{text:r.industry})]),sp,h("div",{class:"res-kpis"},r.kpis.map(function(k){return h("div",null,[h("strong",{text:k.value}),h("small",{text:k.label})])})),h("div",{class:"obj",text:r.objective})]);
+  var shot=r.image?media(stripT(r.image),900):"";return h("article",{class:"res"+(shot?" has-shot":"")},[h("div",{class:"res-top"},[h("b",{text:r.client}),h("span",{text:r.industry})]),shot?h("div",{class:"res-shot"},[h("img",{src:shot,alt:r.client+" Meta ads results",loading:"lazy"})]):sp,h("div",{class:"res-kpis"},r.kpis.map(function(k){return h("div",null,[h("strong",{text:k.value}),h("small",{text:k.label})])})),h("div",{class:"obj",text:r.objective})]);
 }
 mount("results",homeList(C.portfolio.results).map(resCard));
 
