@@ -1075,6 +1075,24 @@
     "label": "Contact",
     "href": "#contact"
    }
+  ],
+  "social": [
+   {
+    "platform": "Instagram",
+    "href": ""
+   },
+   {
+    "platform": "Facebook",
+    "href": ""
+   },
+   {
+    "platform": "LinkedIn",
+    "href": ""
+   },
+   {
+    "platform": "YouTube",
+    "href": ""
+   }
   ]
  },
  "forms": {

@@ -41,6 +41,15 @@ var ICONS={
   check:'M4 12.5l5 5 11-11',plus:'M12 5v14M5 12h14',
   star:'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z',
   play:'M7 4v16l13-8z',pause:'M7 4h3v16H7zM14 4h3v16h-3z',arrow:'M5 12h14M13 6l6 6-6 6',left:'M15 5l-7 7 7 7',right:'M9 5l7 7-7 7',x:'M6 6l12 12M18 6L6 18',
+  instagram:'M7 3h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4V7a4 4 0 014-4zM12 16a4 4 0 100-8 4 4 0 000 8zM17.5 6.5h.01',
+  facebook:'M15 3h-2.5A3.5 3.5 0 009 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 011-1H15z',
+  linkedin:'M4 9h3.5v11H4zM5.75 6.5a1.75 1.75 0 100-3.5 1.75 1.75 0 000 3.5zM10.5 9H14v1.6c.6-1 1.8-1.9 3.6-1.9 2.6 0 3.4 1.7 3.4 4.4V20h-3.5v-6c0-1.4-.4-2.4-1.8-2.4S14 12.7 14 14v6h-3.5z',
+  youtube:'M21 8.2a3 3 0 00-2.1-2.1C17 5.6 12 5.6 12 5.6s-5 0-6.9.5A3 3 0 003 8.2 31 31 0 002.6 12 31 31 0 003 15.8a3 3 0 002.1 2.1c1.9.5 6.9.5 6.9.5s5 0 6.9-.5a3 3 0 002.1-2.1 31 31 0 00.4-3.8 31 31 0 00-.4-3.8zM10 15V9l5 3z',
+  xsocial:'M4 4l6.6 8.7L4.2 20M20 4l-6.4 7.3M4 4h4l12 16h-4z',
+  whatsapp:'M3.5 20.5l1.3-4.2A8.5 8.5 0 1120.5 12a8.5 8.5 0 01-12.6 7.4zM9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a5 5 0 01-2.3-2.3l.8-1-1-2z',
+  threads:'M16.5 11.5c-.3-2.6-2-4-4.4-4-2.7 0-4.4 1.9-4.4 4.6 0 2.6 1.6 4.4 4.1 4.4 2.3 0 3.9-1.4 3.9-3.6 0-2.4-2.1-3.2-4-2.8M12 21c-5 0-8.5-3.6-8.5-9S7 3 12 3c4.5 0 7.6 2.6 8.3 6.7',
+  pinterest:'M12 21a9 9 0 100-18 9 9 0 000 18zM10.5 13.5L9 20M10.3 14.2c.5.8 1.4 1.3 2.4 1.3 2.5 0 4-2.2 4-4.8 0-2.6-2.2-4.4-4.9-4.4-3.1 0-5 2.2-5 4.5 0 1 .4 2.1 1.2 2.5',
+  globe:'M12 21a9 9 0 100-18 9 9 0 000 18zM3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z',
   comment:'M4 5h16v11H9l-5 4z',send:'M21 3L10 14M21 3l-7 18-4-7-7-4z',flag:'M5 21V4M5 4h11l-2 4 2 4H5'
 };
 function icon(name,fill){
@@ -320,6 +329,13 @@ lb.addEventListener("keydown",function(e){if(e.key==="ArrowRight")lbStep(1);if(e
 /* contact + footer */
 (function(){var a=document.getElementById("cnt-ads"),r=document.getElementById("cnt-results");if(a)a.textContent="("+C.portfolio.ads.items.length+")";if(r)r.textContent="("+C.portfolio.results.items.length+")"})();
 mount("cinfo",C.contact.details.map(function(d){return h("div",null,[h("span",{text:d.label}),h("span",{text:d.value})])}));
+/* social media buttons (contact, footer, menu): only platforms with a real link show */
+function socialRow(){var SI={instagram:"instagram",facebook:"facebook",linkedin:"linkedin",youtube:"youtube",x:"xsocial",twitter:"xsocial",whatsapp:"whatsapp",threads:"threads",pinterest:"pinterest"};
+  var list=((C.footer&&C.footer.social)||[]).filter(function(x){return x&&/^https:\/\/[^\s<>"']{4,}$/.test(x.href||"")});
+  if(!list.length)return null;
+  return h("ul",{class:"social"},list.map(function(x){var k=String(x.platform||"").toLowerCase().replace(/[^a-z]/g,"");return h("li",null,[h("a",{href:x.href,target:"_blank",rel:"noopener noreferrer","aria-label":(x.platform||"Social media")+" (opens in a new tab)","data-cursor":"hover"},[icon(SI[k]||"globe")])])}))}
+["cinfo","menu-contact"].forEach(function(id){var r=socialRow(),el=document.getElementById(id);if(r&&el)el.after(r)});
+(function(){var r=socialRow(),fb=document.querySelector(".foot-brand");if(r&&fb)fb.appendChild(r)})();
 mount("foot-links",C.footer.links.map(function(l){return h("li",null,[h("a",{href:safeUrl(l.href),text:l.label})])}));
 
 /* careers */

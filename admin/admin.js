@@ -140,6 +140,7 @@ var SECTIONS = [
   ['footer', 'Footer', 'The bottom of the page.']
 ];
 var LABELS = {
+  social: 'Social media buttons', platform: 'Platform',
   favicon: 'Favicon (browser tab icon)',
   kicker: 'Small heading', title: 'Heading', text: 'Text', subtitle: 'Subheading', tagline: 'Tagline', button: 'Button text', cta: 'Button text', name: 'Name', full: 'Full name', year: 'Year',
   image: 'Image', logo: 'Logo', photo: 'Photo', poster: 'Cover image', video: 'Video', label: 'Label', href: 'Link', value: 'Value', suffix: 'After the number', q: 'Question', a: 'Answer',
@@ -155,12 +156,14 @@ var LABELS = {
   allTitle: '“All our work” page heading', graphics: 'Graphics', ads: 'Creative video ads', results: 'Meta ads results', description: 'Description'
 };
 var HELP = {
+  social: 'Shown in the contact section, the footer and the menu. Add a platform, paste the full link to your page, or remove one. Platforms without a link stay hidden.',
   favicon: 'A square PNG, at least 192 x 192 pixels. Leave it empty to show the orange d.',
   title: 'Wrap a word in *stars* to highlight it.', featured: 'Turn on to show this brand in the moving strip near the top.', showOnHome: 'The rest show when people press “See all”.',
   orientation: 'Vertical for reels, horizontal for wide video ads.', open: 'Turn off to hide the job without deleting it.', image: 'If empty, a designed picture is shown.',
   id: 'Used by the page. Leave it as it is.', video: 'MP4 works best. Keep it under 100 MB.', ratio: 'Width/height, like 4/5 for a tall photo.'
 };
 var ENUMS = {
+  platform: 'Instagram,Facebook,LinkedIn,YouTube,X,WhatsApp,Threads,Pinterest,Website'.split(',').map(function (x) { return [x, x]; }),
   orientation: [['vertical', 'Vertical (reel)'], ['horizontal', 'Horizontal (wide)']],
   size: [['tall', 'Tall'], ['square', 'Square'], ['wide', 'Wide']],
   art: [['calendar', 'Calendar'], ['shoot', 'Camera'], ['edit', 'Editing'], ['ads', 'Ad post'], ['brand', 'Branding'], ['report', 'Report']],
