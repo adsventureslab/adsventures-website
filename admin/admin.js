@@ -140,6 +140,7 @@ var SECTIONS = [
   ['footer', 'Footer', 'The bottom of the page.']
 ];
 var LABELS = {
+  favicon: 'Favicon (browser tab icon)',
   kicker: 'Small heading', title: 'Heading', text: 'Text', subtitle: 'Subheading', tagline: 'Tagline', button: 'Button text', cta: 'Button text', name: 'Name', full: 'Full name', year: 'Year',
   image: 'Image', logo: 'Logo', photo: 'Photo', poster: 'Cover image', video: 'Video', label: 'Label', href: 'Link', value: 'Value', suffix: 'After the number', q: 'Question', a: 'Answer',
   items: 'Items', links: 'Links', chapters: 'Story steps', chapter: 'Step label', adopted: 'What we adopted', improved: 'What we improved', founders: 'Founders', role: 'Role', list: 'Brands',
@@ -154,6 +155,7 @@ var LABELS = {
   allTitle: '“All our work” page heading', graphics: 'Graphics', ads: 'Creative video ads', results: 'Meta ads results', description: 'Description'
 };
 var HELP = {
+  favicon: 'A square PNG, at least 192 x 192 pixels. Leave it empty to show the orange d.',
   title: 'Wrap a word in *stars* to highlight it.', featured: 'Turn on to show this brand in the moving strip near the top.', showOnHome: 'The rest show when people press “See all”.',
   orientation: 'Vertical for reels, horizontal for wide video ads.', open: 'Turn off to hide the job without deleting it.', image: 'If empty, a designed picture is shown.',
   id: 'Used by the page. Leave it as it is.', video: 'MP4 works best. Keep it under 100 MB.', ratio: 'Width/height, like 4/5 for a tall photo.'
@@ -166,7 +168,7 @@ var ENUMS = {
   ratio: [['4/5', 'Tall 4:5'], ['3/4', 'Tall 3:4'], ['1/1', 'Square'], ['4/3', 'Wide 4:3'], ['16/10', 'Wide 16:10']],
   type: [['Full-time', 'Full-time'], ['Part-time', 'Part-time'], ['Internship', 'Internship'], ['Freelance', 'Freelance'], ['Contract', 'Contract']]
 };
-var MEDIA = /^(image|logo|photo|poster|video)$/;
+var MEDIA = /^(image|logo|photo|poster|video|favicon)$/;
 var LONG = /^(text|a|about|message|how|quote|for|description|endText|subtitle|privacy)$/;
 function label(k) { return LABELS[k] || String(k).replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^./, function (c) { return c.toUpperCase(); }); }
 function itemTitle(o, i) {
