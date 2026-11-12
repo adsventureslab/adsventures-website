@@ -735,28 +735,46 @@
   ],
   "reviews": [
    {
-    "name": "[Client name]",
-    "company": "[Company]",
+    "name": "Pratik Bhatt",
+    "company": "PV Energy",
     "rating": 5,
-    "text": "[Client review. One or two sentences about the result they saw.]"
+    "text": "AdsVentures Lab gave us a 127x return on our ad spend, which was more than we expected. Even better, the leads were genuine: people who actually wanted solar for their homes and businesses. Highly recommended."
    },
    {
-    "name": "[Client name]",
-    "company": "[Company]",
+    "name": "Vandan Patel",
+    "company": "High Beam Auto Tech",
     "rating": 5,
-    "text": "[Client review about working with the team.]"
+    "text": "We wanted serious franchise enquiries, not random leads, and AdsVentures Lab delivered exactly that. The quality of franchise leads was really good. Their ad ideas were creative, different and always on brand."
    },
    {
-    "name": "[Client name]",
-    "company": "[Company]",
+    "name": "Dr. Piyush Kalsariya",
+    "company": "Viyush Children & Family Dental Clinic",
     "rating": 5,
-    "text": "[Client review about the content quality.]"
+    "text": "We have been working with AdsVentures Lab for more than 3 years now. They understand that healthcare communication must be honest and simple, and they always keep it that way. Over the years, our online presence has built real trust with parents and families."
    },
    {
-    "name": "[Client name]",
-    "company": "[Company]",
+    "name": "Shyam Kanani",
+    "company": "Indosky Textile",
     "rating": 5,
-    "text": "[Client review about the ads and leads.]"
+    "text": "Textile machinery is not an easy industry for social media, but the team created value-based content that actually helps our buyers. It made Indosky look different from everyone else in the market."
+   },
+   {
+    "name": "Nirmal Mavapuri",
+    "company": "VUN Embroidery Cords",
+    "rating": 5,
+    "text": "The content AdsVentures Lab made for us put VUN in the limelight. From the founder story to the product videos, everything felt genuine and premium. Our brand finally looks the way we always wanted."
+   },
+   {
+    "name": "Rajesh Dhanani",
+    "company": "Harakh Naturals",
+    "rating": 5,
+    "text": "AdsVentures Lab helped us build real brand value. People now recognise Harakh Naturals and trust it more, and a big part of that is the way the team presents our brand online."
+   },
+   {
+    "name": "Alpesh Kathiriya",
+    "company": "Jalpooree",
+    "rating": 5,
+    "text": "We trusted AdsVentures Lab with our complete social media, and they made it feel effortless for us. The posts are fun, relatable and full of the Jalpooree taste. They really understand our brand and our customers."
    }
   ]
  },
