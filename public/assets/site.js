@@ -188,6 +188,21 @@ mount("ad-items",ADS.map(function(a,i){
   var mp=h("div",{class:"mphone"},[h("div",{class:"phone"+(isLand(a)?" land":"")},[h("span",{class:"notch"}),h("div",{class:"screen"},[h("div",{class:"slide on"},[h("div",{class:"tint",style:"background:linear-gradient(170deg,#3A2A22,#141416)"}),adMedia(a)||h("span",{text:"Video ad "+(i+1)+" plays here"})].concat(phoneUi(a)))])])]);
   return h("article",{class:"ad-item","data-i":i},[mp,orientTag(a),h("span",{class:"client",text:a.client}),h("h4",{text:a.title}),h("dl",null,[h("div",null,[h("dt",{text:"The message"}),h("dd",{text:a.message})]),h("div",null,[h("dt",{text:"How we made it"}),h("dd",{text:a.how})])])]);
 }));
+/* videos play by themselves (muted) while they are on screen, like a social feed */
+var adOnScreen=true;
+(function(){
+  if(!("IntersectionObserver" in window))return;
+  function tryPlay(v){v.muted=v.muted||!v.controls;var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  // desktop: the phone mockup plays its current slide only while the phone is visible
+  new IntersectionObserver(function(es){es.forEach(function(e){adOnScreen=e.isIntersecting;var on=adScreen.querySelector(".slide.on video");
+    adScreen.querySelectorAll("video").forEach(function(v){if(v!==on||!adOnScreen||!adScreen.offsetWidth)v.pause()});
+    if(on&&adOnScreen&&adScreen.offsetWidth)tryPlay(on)})},{threshold:.35}).observe(adScreen);
+  // mobile phones under each ad, and the "See all" view: play the one you are looking at
+  var feed=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+    if(e.isIntersecting&&e.intersectionRatio>=.6&&v.offsetWidth)tryPlay(v);else if(!v.paused)v.pause()})},{threshold:[0,.6]});
+  document.querySelectorAll(".mphone video").forEach(function(v){feed.observe(v)});
+  window.__feedWatch=function(root){root.querySelectorAll("video").forEach(function(v){v.muted=true;feed.observe(v)})};
+})();
 function resCard(r,i){
   var sp=s("svg",{class:"spark",viewBox:"0 0 300 90",preserveAspectRatio:"none","aria-hidden":"true"});
   var pts=[[0,78],[40,70],[80,74],[120,58],[160,60],[200,40],[240,34],[300,12+(i%3)*6]];
@@ -209,7 +224,7 @@ function awShow(k){
   if(k==="graphics")node=h("div",{class:"aw-cols"},C.portfolio.graphics.items.map(function(g,i){var src=media(stripT(g.image)),ar={tall:"4/5",square:"1/1",wide:"16/10"}[g.size]||"1/1";var tile=h("div",{class:"aw-g",style:"aspect-ratio:"+ar+";background:"+tints[i%4]},[src?h("img",{src:src,alt:g.title,loading:"lazy"}):h("span",{class:"ph",text:"Your graphic here"}),g.text?null:h("span",{class:"cap"},[h("b",{text:g.title}),h("span",{text:g.client})])]);return g.text?h("figure",{class:"aw-gf"},[tile,h("figcaption",null,[h("small",{text:g.client}),h("b",{text:g.title}),h("p",{text:g.text})])]):tile}));
   else if(k==="ads")node=h("div",{class:"aw-cols"},C.portfolio.ads.items.map(function(a,i){return h("article",{class:"aw-v"},[h("div",{class:"vid",style:"aspect-ratio:"+(isLand(a)?"16/9":"9/16")},[adMedia(a,true)||h("span",{text:"Video ad "+(i+1)})]),h("div",{class:"txt"},[orientTag(a),h("small",{text:a.client}),h("b",{text:a.title}),h("p",null,[h("strong",{text:"The message: "}),a.message]),h("p",null,[h("strong",{text:"How we made it: "}),a.how])])])}));
   else node=h("div",{class:"aw-res"},C.portfolio.results.items.map(resCard));
-  awPanel.replaceChildren(node);
+  awPanel.replaceChildren(node);if(k==="ads"&&window.__feedWatch)window.__feedWatch(node);
   if(hasGsap&&!reduced)gsap.from(node.children,{y:40,opacity:0,duration:.7,stagger:.05,ease:"expo.out"});
 }
 awTabs.addEventListener("click",function(e){var b=e.target.closest("button");if(b)awShow(b.dataset.k)});
@@ -573,7 +588,7 @@ function initScroll(){
     ScrollTrigger.create({trigger:it,start:"top 55%",end:"bottom 55%",onToggle:function(x){if(!x.isActive)return;var i=+it.dataset.i;
       document.querySelectorAll(".ad-item").forEach(function(o){o.classList.toggle("on",o===it)});
       var dv=document.getElementById("ad-device");if(ADS[i])dv.classList.toggle("land",isLand(ADS[i]));
-      slides.forEach(function(sl,k){sl.classList.toggle("on",k===i);var v=sl.querySelector("video");if(v){if(k===i)v.play().catch(function(){});else v.pause()}})}});
+      slides.forEach(function(sl,k){sl.classList.toggle("on",k===i);var v=sl.querySelector("video");if(v){if(k===i&&adScreen.offsetWidth&&adOnScreen)v.play().catch(function(){});else v.pause()}})}});
   });
   gsap.from("#results .res",{clearProps:"transform",y:90,rotateX:-35,rotateY:function(i){return (i-1)*14},transformPerspective:1200,transformOrigin:"50% 100%",duration:1.2,ease:"expo.out",stagger:.12,scrollTrigger:{trigger:"#results",start:"top 85%",once:true}});
   document.querySelectorAll("#results .sl").forEach(function(p){var l=p.getTotalLength();p.style.strokeDasharray=l;p.style.strokeDashoffset=l;gsap.to(p,{strokeDashoffset:0,duration:1.6,ease:"power2.out",scrollTrigger:{trigger:p,start:"top 90%",once:true}})});
